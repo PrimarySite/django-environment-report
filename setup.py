@@ -33,7 +33,7 @@ setup(name='djenvrep',
         # Include any *.html files found in the 'templates' subdirectory
         # of the 'djenvrep' package:
         'djenvrep': ['templates/*.html'],
-    }
+      },
       include_package_data=True,
       zip_safe=False,
       install_requires=[
