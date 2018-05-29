@@ -127,6 +127,26 @@
     </tbody>
   </table>
 
+<h1 id="migration-info">Migrations</h1>
+
+  <table class="req">
+    <thead>
+      <tr>
+        <th>App</th>
+        <th>Version</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for migration in migrations %}
+        <tr>
+          <td>{{ migration.app }}</td>
+          <td>{{ migration.name }}</td>
+          <td>{{ migration.applied }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 </div>
 </body>
 </html>

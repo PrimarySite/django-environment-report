@@ -12,6 +12,7 @@ import sys
 # Django
 import django
 from django.db import connection
+from django.db.migrations.recorder import MigrationRecorder
 
 try:  # pragma: nocover
     from pip._internal.operations import freeze
@@ -53,3 +54,8 @@ def get_db_info():
     else:
         db_info['version'] = 'unknown'
     return db_info
+
+
+def get_migrations():
+    """Get the migrations."""
+    return MigrationRecorder.Migration.objects.all()

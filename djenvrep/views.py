@@ -12,6 +12,7 @@ from django.views.debug import get_safe_settings
 # Local
 from .utils import get_db_info
 from .utils import get_installed_packages
+from .utils import get_migrations
 from .utils import get_python_paths
 from .utils import get_versions
 
@@ -29,6 +30,7 @@ def environment_settings_view(request, template_name='environment-report.html'):
         'versions': get_versions(),
         'python_paths': get_python_paths(),
         'db': get_db_info(),
+        'migrations': get_migrations(),
     }
 
     return render(request, template_name, context)
