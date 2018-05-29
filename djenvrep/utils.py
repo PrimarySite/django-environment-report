@@ -26,7 +26,11 @@ def get_installed_packages():
     packages.sort()
     installed = dict()
     for package in packages:
-        name, version = package.split('==')
+        try:
+            name, version = package.split('==')
+        except ValueError:
+            name = package
+            version = 'Unknown'
         installed[name] = version
     return installed
 
