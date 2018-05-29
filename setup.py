@@ -29,11 +29,6 @@ setup(name='djenvrep',
       url='https://github.com/PrimarySite/django-environment-report',
       license='MIT',
       packages=find_packages(exclude=['tests', 'testproj']),
-      package_data={
-        # Include any *.html files found in the 'templates' subdirectory
-        # of the 'djenvrep' package:
-        'djenvrep': ['templates/*.html'],
-      },
       include_package_data=True,
       zip_safe=False,
       install_requires=[
