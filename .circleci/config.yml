@@ -44,7 +44,7 @@ jobs:
               source venv/bin/activate
               pip install -r tests/requirements-dj20.txt
               coverage run manage.py test
-              codecov --token=d1a7380f-e48e-4280-80b5-9004a70e935b
+              codecov
 
   test-django-1.11-py-3.6:
       docker:

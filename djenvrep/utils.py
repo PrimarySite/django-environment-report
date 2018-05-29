@@ -22,6 +22,7 @@ except ImportError:  # pragma: nocover
 def get_installed_packages():
     """Get all installed packages with `pip freeze`."""
     packages = list(freeze.freeze())
+    packages.sort()
     installed = dict()
     for package in packages:
         name, version = package.split('==')
