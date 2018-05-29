@@ -4,7 +4,7 @@ import sys
 from setuptools import find_packages
 from setuptools import setup
 
-version = '0.4'
+version = '0.1.2'
 
 setup(name='djenvrep',
       version=version,
@@ -29,6 +29,11 @@ setup(name='djenvrep',
       url='https://github.com/PrimarySite/django-environment-report',
       license='MIT',
       packages=find_packages(exclude=['tests', 'testproj']),
+      package_data={
+        # Include any *.html files found in the 'templates' subdirectory
+        # of the 'djenvrep' package:
+        'djenvrep': ['templates/*.html'],
+    }
       include_package_data=True,
       zip_safe=False,
       install_requires=[
