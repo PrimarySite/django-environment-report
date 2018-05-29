@@ -1,0 +1,21 @@
+-r requirements-dj111.txt
+flake8-blind-except
+flake8-builtins
+flake8-coding
+flake8-commas
+flake8-debugger
+flake8-docstrings
+flake8-isort
+flake8-pep3101
+flake8-quotes
+flake8-string-format
+flake8
+isort
+lizard
+pep257
+pep8-naming
+pep8
+pip-check
+pycodestyle<2.4.0
+pyflakes<1.7.0
+radon
