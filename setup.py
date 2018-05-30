@@ -28,7 +28,7 @@ setup(name='djenvrep',
       author_email='christian.ledermann@gmail.com',
       url='https://github.com/PrimarySite/django-environment-report',
       license='MIT',
-      packages=find_packages(exclude=['tests', 'testproj']),
+      packages=find_packages(exclude=['testproj']),
       include_package_data=True,
       zip_safe=False,
       install_requires=[
