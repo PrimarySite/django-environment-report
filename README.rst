@@ -4,7 +4,7 @@ Django Environment Report
 Report the environment of your django installation
 
 Sometimes you need a quick look at the internals of your django website withou having to ``ssh``
-into the machine.
+into the machine. You need to be a ``superuser`` to access this view.
 
 OS and Python Information
 ==========================
@@ -30,3 +30,10 @@ Locales
 ========
 
 Display information about the system ``Locale``.
+
+Install
+--------
+
+``pip install djenvrep``
+
+Add ``url(r'^/admin/settings/', include('djenvrep.urls')),`` to your ``urls.py``.
