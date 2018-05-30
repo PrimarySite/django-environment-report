@@ -37,3 +37,5 @@ Install
 ``pip install djenvrep``
 
 Add ``url(r'^/admin/settings/', include('djenvrep.urls')),`` to your ``urls.py``.
+
+Then go to ``http://localhost:8000/admin/settings/environment-settings/`` to view your environment.
