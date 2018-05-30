@@ -92,5 +92,8 @@ def get_locale_info():
     info['p_sign_posn'] = sign_positions[info['p_sign_posn']]
     info['n_sign_posn'] = sign_positions[info['n_sign_posn']]
     # convert the currency symbol to unicode
-    info['currency_symbol_u'] = info['currency_symbol'].decode('utf-8')
+    try:
+        info['currency_symbol_u'] = info['currency_symbol'].decode('utf-8')
+    except AttributeError:
+        info['currency_symbol_u'] = info['currency_symbol']
     return info
