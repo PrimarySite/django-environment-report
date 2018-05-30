@@ -1,6 +1,14 @@
 Django Environment Report
 --------------------------
 
+.. image:: https://circleci.com/gh/PrimarySite/django-environment-report.svg?style=svg
+    :target: https://circleci.com/gh/PrimarySite/django-environment-report
+
+.. image:: https://codecov.io/gh/PrimarySite/django-environment-report/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/PrimarySite/django-environment-report
+
+
+
 Report the environment of your django installation
 
 Sometimes you need a quick look at the internals of your django website withou having to ``ssh``
