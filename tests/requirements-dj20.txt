@@ -2,3 +2,4 @@ Django<2.1
 djangorestframework
 coverage
 codecov
+-e git://github.com/PrimarySite/rproxyi.git@0.1.1#egg=rproxyi

@@ -6,6 +6,8 @@ from __future__ import absolute_import
 from __future__ import unicode_literals
 
 # Standard Library
+import locale
+import os
 import platform
 import sys
 
@@ -63,3 +65,32 @@ def get_db_info():
 def get_migrations():
     """Get the migrations."""
     return MigrationRecorder.Migration.objects.all()
+
+
+def get_system_locales():
+    """Get system locale settings."""
+    locales = dict()
+    for env_name in ['LC_ALL', 'LC_CTYPE', 'LANG', 'LANGUAGE']:
+        locales[env_name] = os.environ.get(env_name, 'Not Set')
+
+    locales['Locale from environment'] = locale.getlocale()
+    return locales
+
+
+def get_locale_info():
+    """Get the details of the locale."""
+    sign_positions = {
+        0: 'Surrounded by parentheses',
+        1: 'Before value and symbol',
+        2: 'After value and symbol',
+        3: 'Before value',
+        4: 'After value',
+        locale.CHAR_MAX: 'Unspecified',
+    }
+    info = dict()
+    info.update(locale.localeconv())
+    info['p_sign_posn'] = sign_positions[info['p_sign_posn']]
+    info['n_sign_posn'] = sign_positions[info['n_sign_posn']]
+    # convert the currency symbol to unicode
+    info['currency_symbol_u'] = info['currency_symbol'].decode('utf-8')
+    return info
