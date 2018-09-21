@@ -17,5 +17,5 @@ pep8-naming==0.7.0
 pep8==1.7.1
 pip-check==2.3.3
 pycodestyle==2.4.0
-pyflakes<1.7.0
+pyflakes==2.0.0
 radon
