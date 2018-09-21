@@ -2,5 +2,5 @@ Django==2.1.1
 pip==18.0
 djangorestframework==3.8.2
 coverage==4.5.1
-codecov
+codecov==2.0.15
 mock
