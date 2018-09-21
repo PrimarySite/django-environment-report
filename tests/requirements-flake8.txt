@@ -12,7 +12,7 @@ flake8-string-format==0.2.3
 flake8==3.5.0
 isort==4.3.4
 lizard==1.15.6
-pep257
+pep257==0.7.0
 pep8-naming
 pep8
 pip-check
