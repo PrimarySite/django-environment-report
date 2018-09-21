@@ -14,7 +14,7 @@ isort==4.3.4
 lizard==1.15.6
 pep257==0.7.0
 pep8-naming==0.7.0
-pep8
+pep8==1.7.1
 pip-check
 pycodestyle<2.4.0
 pyflakes<1.7.0
