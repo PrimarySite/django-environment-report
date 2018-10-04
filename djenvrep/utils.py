@@ -73,7 +73,9 @@ def get_system_locales():
     for env_name in ['LC_ALL', 'LC_CTYPE', 'LANG', 'LANGUAGE']:
         locales[env_name] = os.environ.get(env_name, 'Not Set')
 
+    locales['Default locale'] = locale.getdefaultlocale()
     locales['Locale from environment'] = locale.getlocale()
+    locales['Preferred encoding'] = locale.getpreferredencoding()
     return locales
 
 
