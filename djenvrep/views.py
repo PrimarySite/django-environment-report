@@ -4,7 +4,6 @@
 # Django
 from django.contrib.auth.decorators import user_passes_test
 from django.shortcuts import render
-from django.views.debug import SafeExceptionReporterFilter
 
 # Local
 from .utils import get_db_info
@@ -15,7 +14,11 @@ from .utils import get_python_paths
 from .utils import get_system_locales
 from .utils import get_versions
 
-get_safe_settings = SafeExceptionReporterFilter().get_safe_settings()
+try:
+    from django.views.debug import SafeExceptionReporterFilter
+    get_safe_settings = SafeExceptionReporterFilter().get_safe_settings()
+except AttributeError:
+    from django.views.debug import get_safe_settings
 
 
 @user_passes_test(lambda u: u.is_superuser)
