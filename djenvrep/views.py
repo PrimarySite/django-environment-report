@@ -15,7 +15,7 @@ from .utils import get_python_paths
 from .utils import get_system_locales
 from .utils import get_versions
 
-get_safe_settings = SafeExceptionReporterFilter().get_safe_settings()
+get_safe_settings = SafeExceptionReporterFilter().get_safe_settings
 
 
 @user_passes_test(lambda u: u.is_superuser)
