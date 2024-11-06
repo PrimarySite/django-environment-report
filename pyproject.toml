@@ -1,0 +1,24 @@
+
+[project]
+name = "djenvrep"
+version = "1.0.0"
+readme = "README.md"
+description = "Report the environment of your django installation."
+dependencies = [
+  "Django",
+  "djangorestframework",
+  "coverage",
+  "codecov",]
+keywords=["django-environment-report"]
+requires-python = ">= 3.9"
+authors = [{name = "PrimarySite"}]
+maintainers = [{name="PrimarySite"}]
+classifiers=[
+  "Intended Audience :: Developers",
+  "Natural Language :: English",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+]
+
+[project.urls]
+Homepage="https://github.com/PrimarySite/django-environment-report"
