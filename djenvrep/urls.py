@@ -2,7 +2,7 @@
 """Django Environment Report Urls."""
 
 # Django
-from django.conf.urls import re_path
+from django.urls import re_path
 
 # Local
 from .views import environment_settings_view
